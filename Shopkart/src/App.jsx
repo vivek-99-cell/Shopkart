@@ -1,6 +1,7 @@
 import Products from "./pages/Products";
 import Home from "./pages/Home";
 import Navbar from "./components/Navbar";
+import Practice from "./practice"
 
 
 function App() {
@@ -8,8 +9,9 @@ function App() {
 
   return (
     <>
-      <Navbar />
-      <Home />
+          <Navbar />
+          <Home />
+          
     </>
   )
 }

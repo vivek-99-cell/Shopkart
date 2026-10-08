@@ -1,0 +1,203 @@
+.hero-section{
+    margin: 20px;
+    min-height: 420px;
+    border-radius: 18px;
+    background-image: url("/images/hero-banner-3.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    padding: 50px;
+}
+.hero-content{
+    max-width: 500px;
+    color: white;
+}
+
+.hero-content h1{
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.hero-content h1 span{
+    color: #8ab3a6;
+}
+
+.hero-content p{
+    font-size: 19px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.shop-btn {
+    background-color: #8ab3a6;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 7px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.shop-btn:hover {
+    background-color: #078f86;
+}
+
+.deal-btn {
+    background-color: transparent;
+    color: white;
+    border: 2px solid #0ab3a6;
+    padding: 12px 24px;
+    border-radius: 7px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.deal-btn:hover {
+    background-color: #0ab3a6;
+}
+
+/* Hero Benefits */
+
+.hero-benefits {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    margin-top: 35px;
+}
+
+.benefit-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.benefit-item img {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+}
+
+.category-section{
+    padding: 35px 32px;
+
+}
+
+.section-heading{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.section-heading h2{
+    font-family: "Inter", sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.section-heading a{
+    color: #0aa89e;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* Category Cards */
+.category-list{
+    display: flex;
+    gap: 16px;
+}
+
+/* Category Images */
+.category-card img{
+    width: 145px;
+    height: 145px;
+    object-fit: contain;
+    margin-bottom: 3px;
+}
+
+/*Section Heading*/
+
+.section-heading{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Category Cards */
+
+.category-card{
+    flex: 1;
+    height: 230px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* Category Names */
+.category-card h3{
+    margin: 3px 0;
+    font-size: 16px;
+    font-weight: 700;
+    color: #111827;
+}
+
+/* product count */
+.category-card p{
+    margin: 0;
+    font-size: 13px;
+    color: #374151;
+}
+
+/* Diff B.G. */
+
+.electronics{
+    background-color: #e9f7f5;
+
+}
+
+.fashion{
+    background-color: #fff5dc;
+}
+
+.beauty{
+    background-color: #f1eafa;
+}
+
+.sports{
+    background-color: #e9f0e9;
+}
+
+.books{
+    background-color: #fceee5;;
+}
+
+/* Hover Effect */
+
+.category-card:hover{
+    transform: translate(-5px);
+    transition: 0.3s;
+}
+
+@media(max-width: 1020px){
+
+    .category-list{
+        flex-wrap: wrap;
+        gap: 14px;
+    }
+}

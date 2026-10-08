@@ -1,0 +1,145 @@
+.practice-page {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 32px 16px;
+  background: linear-gradient(110deg, #aa40b0 0%, #f0329c 100%);
+  color: #111;
+  font-family: Arial, sans-serif;
+}
+
+.practice-card {
+  width: min(100%, 450px);
+  padding: 40px 35px 36px;
+  border-radius: 6px;
+  background: #fff;
+  box-shadow: 0 12px 28px rgb(63 17 68 / 16%);
+}
+
+.practice-card h1 {
+  margin: 0 0 40px;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.practice-tabs {
+  display: flex;
+  margin-bottom: 34px;
+  overflow: hidden;
+  border: 1px solid #d5d5d5;
+  border-radius: 6px;
+}
+
+.practice-tab {
+  flex: 1;
+  min-height: 56px;
+  border: 0;
+  background: #fff;
+  color: #111;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.practice-tab.is-active {
+  background: linear-gradient(110deg, #aa40b0 0%, #f0329c 100%);
+  color: #fff;
+}
+
+.practice-form {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.practice-form input {
+  width: 100%;
+  min-height: 57px;
+  padding: 0 16px;
+  border: 1px solid #d4d4d4;
+  border-radius: 6px;
+  background: #fff;
+  color: #111;
+  font: inherit;
+  font-size: 20px;
+  outline: none;
+}
+
+.practice-form input::placeholder {
+  color: #a4a4a4;
+  opacity: 1;
+}
+
+.practice-form input:focus {
+  border-color: #c34aa8;
+  box-shadow: 0 0 0 3px rgb(195 74 168 / 16%);
+}
+
+.practice-text-button {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: #d66b9e;
+  font: inherit;
+  cursor: pointer;
+}
+
+.practice-forgot {
+  align-self: flex-start;
+  margin-top: -14px;
+  font-size: 18px;
+}
+
+.practice-submit {
+  min-height: 59px;
+  margin-top: 2px;
+  border: 0;
+  border-radius: 6px;
+  background: linear-gradient(110deg, #aa40b0 0%, #f0329c 100%);
+  color: #fff;
+  font: inherit;
+  font-size: 21px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.practice-tab:focus-visible,
+.practice-text-button:focus-visible,
+.practice-submit:focus-visible {
+  outline: 3px solid #7f267c;
+  outline-offset: 3px;
+}
+
+.practice-switch {
+  margin: 35px 0 0;
+  text-align: center;
+  color: #333;
+  font-size: 18px;
+}
+
+.practice-switch .practice-text-button {
+  font-size: inherit;
+}
+
+.practice-visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  clip-path: inset(50%);
+}
+
+@media (max-width: 480px) {
+  .practice-card {
+    padding: 32px 24px;
+  }
+
+  .practice-card h1 {
+    margin-bottom: 32px;
+    font-size: 34px;
+  }
+}
