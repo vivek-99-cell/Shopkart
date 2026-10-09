@@ -2,6 +2,90 @@ import react from 'react'
 import Navbar from '../components/Navbar'
 import './Home.css'
 
+const product =[
+  {
+    id: 1,
+    name:"boAt Rockerz 450",
+    category: "Electronics",
+    price: "1,599",
+    rating: 4.5,
+    reviews: 1200,
+    image: "/images/products/headphones.png"
+},
+  {
+    id: 2,
+    name: "Noise Colorfit Pro 4",
+    category: "Electronics",
+    price: "2,999",
+    rating: 4.6,
+    reviews: 2300,
+    image: "/images/products/noisefit.png"
+  },
+
+  {
+    id: 3,
+    name: "Red Tape Sneakers",
+    category: "Fashion",
+    price: "2,099",
+    rating: 4.5,
+    reviews: 890,
+    image: "/images/products/sneakers.png"
+    
+  },
+
+  {
+    id: 4,
+    name: "Levi's Jeans",
+    category: "Fashion",
+    price: "2,099",
+    rating: 4.5,
+    reviews: 890,
+    image: "/images/products/jeans.png"
+  
+  },
+
+    {
+    id: 5,
+    name: "boAt Airdopes 141",
+    category: "Electronics",
+    price: "1,299",
+    rating: 4.4,
+    reviews: 3400,
+    image: "/images/products/airdopes.png"
+  
+  },
+
+    {
+    id: 6,
+    name: "Iphone 17 pro max",
+    category: "Electronics",
+    price: "1,24,000",
+    rating: 4.9,
+    reviews: 2100,
+    image: "/images/products/iphone.png",
+  },
+
+  {
+    id: 7,
+    name: "Men's Casual Shirt",
+    category: "Fashion",
+    price: "899",
+    rating: 4.3,
+    reviews: 760,
+    image: "/images/products/ferrari.png",
+  },
+
+  {
+    id: 8,
+    name: "Minimalist Table Lamp",
+    category: "Home & Kitchen",
+    price: "1,199",
+    rating: 4.5,
+    reviews: 540,
+    image: "/images/products/lamp.png",
+  },
+
+];
 
 function Home() {
   return (
@@ -83,6 +167,83 @@ function Home() {
             <p>1200+ Products</p>
           </div>
 
+        </div>
+      </section>
+
+      {/* Trending Products */}
+
+      <section className="products-section" id="trending">
+        <div className="section-heading">
+          <div className ="trending-heading">
+            <h2 className="trending-title">
+              <span className="trending-icon">
+                <img src="/icons/trending.png" alt="Trending"/>
+              </span>
+              <span> Trending <strong>Now</strong></span>
+            </h2>
+
+            <p className="trending-subtitle">
+              Most popular choices this week
+            </p>
+          </div>
+          <a href="/products" className="view-products"> 
+          View All Products </a>
+        </div>
+        
+        
+        <div>
+          <div className="trending-product-grid">
+            {products.map(product)=>(
+              <div className="trending-product-card"
+              key={product.id}>
+
+                <div className="trending-product-image">
+                  <img 
+                  src={product.image}
+                  alt={product.name}
+                  />
+                </div>
+
+                <div className="trending-product-details">
+
+                  <div className="trending-product-meta">
+
+                    <span className="trending-product-category">
+                      {product.category}
+                    </span>
+
+                    <span className="trending-product-rating">
+                      {product.rating} ({product.reviews})
+                    </span>
+
+                  </div>
+
+                  <h3>{product.name}</h3>
+
+                  <div className="trending-product-price">
+                    Rs{product.price}
+                  </div>
+
+                  <div className="trending-product-actions">
+                    <button className="trending-buy-now-button">
+                      Buy Now
+                    </button>
+
+                    <button className="trending-cart-button">
+                      <img 
+                      src="/icons/products-cart.png"
+                      alt="cart"
+                      />
+                    </button>
+
+                  </div>
+
+                </div>
+
+              </div>
+              
+            )}
+          </div>
         </div>
       </section>
     </>
